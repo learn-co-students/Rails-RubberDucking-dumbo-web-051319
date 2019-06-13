@@ -1,0 +1,12 @@
+<h1> Show Page for <%= @duck.name %>!!!</h1>
+
+<ul>
+  <li>
+    Name: <%= @duck.name %>
+    <li>
+    Description: <%= @duck.description %>
+  </li>
+</ul>
+
+<%= link_to "Edit This Ducky", edit_duck_path %>
+<%= link_to "All The Duckys", ducks_path %>

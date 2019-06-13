@@ -1,0 +1,14 @@
+<h1> 👤<%= @student.name %>'s Page 🦆</h1>
+
+<h3>Here's a list of my ducks!</h3>
+<ul>
+  <% @ducks.each do |duck| %>
+    <li>
+      <%= link_to duck.name, duck %>
+    </li>
+  <% end  %>
+</ul>
+
+<%= link_to '<button type="button">Edit?</button>'.html_safe, edit_student_path %>
+
+<%= button_to "Delete #{@student.name}?", student_path(@student), method: :delete, data: { confirm: '(｡•́︿•̀｡) Are you sure?'} %>

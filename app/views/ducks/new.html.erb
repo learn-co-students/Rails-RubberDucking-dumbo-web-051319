@@ -1,0 +1,10 @@
+<h1>🐣 Make A Duck 🐣</h1>
+<%= form_for @duck do |f| %>
+<%= f.label "Name" %>
+  <%= f.text_field :name %><br>
+<%= f.label "Description" %>
+  <%= f.text_field :description %><br>
+<%= f.label "Select a student" %>
+  <%= f.collection_select :student_id, @students, :id, :name %><br>
+  <%= f.submit %>
+<% end  %>

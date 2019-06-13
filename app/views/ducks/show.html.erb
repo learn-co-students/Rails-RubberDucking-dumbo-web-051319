@@ -1,0 +1,11 @@
+<h1>🦆 <%= @duck.name %> is cool duck 👤</h1>
+<h4>Description</h4>
+<%= @duck.description %><br>
+<br>
+<h4>Partner</h4>
+<%= link_to @owner.name, @owner %><br>
+<br>
+<%= link_to '<button type="button">Edit Me?</button>'.html_safe, edit_duck_path %><br>
+<br>
+
+<%= button_to "Delete #{@duck.name}?", duck_path(@duck), method: :delete, data: { confirm: '(｡•́︿•̀｡) Are you sure?'} %>

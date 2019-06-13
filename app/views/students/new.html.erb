@@ -1,0 +1,9 @@
+<h1>👶 Make A Student! 👶</h1>
+
+<%= form_for @student do |f| %>
+  <%= f.label "Name" %>
+  <%= f.text_field :name %><br>
+  <%= f.label "Mod" %>
+  <%= f.select :mod, [1, 2, 3, 4, 5 ] %><br>
+  <%= f.submit %>
+<% end  %>

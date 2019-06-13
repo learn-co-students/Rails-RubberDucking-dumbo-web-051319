@@ -1,0 +1,14 @@
+<h1> <%=@student.name %>'s Page </h1>
+<ul>
+  <p>Mod: <%= @student.mod %></p>
+  Has: <%= @ducks.count %> duck(s)
+  <br>
+  <% @ducks.each_with_index do |duck, index| %>
+  <%= index+1 %>. <%= duck.name %>
+  <br>
+  Breed: <%= duck.description %>
+  <br>
+  <% end %>
+</ul>
+
+<%= link_to "Edit", edit_student_path(@student) %>

@@ -1,0 +1,13 @@
+<h1><%= @student.name %>'s Show Page </h1>
+
+<h2>Mod: <%= @student.mod %></h2>
+
+<h3> Ducks Owned by <%= @student.name %> - <%= @student.ducks.count%> <%="duck".pluralize(@student.ducks.count)%></h3>
+<ul>
+<% @student.ducks.each do |duck| %>
+    <li><%= link_to duck.name, duck %></li>
+<% end %>
+</ul>
+
+
+<%= link_to "View All Students", students_path %>

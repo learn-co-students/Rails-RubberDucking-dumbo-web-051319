@@ -1,0 +1,9 @@
+<h1>RUBBER DUCKIE TIME!!!!🐥🛁</h1>
+Duckie name: <%= @duck.name %><br>
+Duckie lyfe: <%= @duck.description %><br>
+My favorite student: <%= link_to @duck.student.name, @duck.student %>
+<BR>
+  <BR>
+
+<%= link_to "DUCK PARTY", ducks_path %><BR>
+<%= button_to "BYE BYE BIRDIE", duck_path, method: :delete %>

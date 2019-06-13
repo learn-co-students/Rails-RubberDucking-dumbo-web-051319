@@ -1,0 +1,10 @@
+<h1>Student Show Page</h1>
+Name: <%= @student.name %><p>
+Mod: <%= @student.mod %>
+<ul>
+Ducks: <% @student.ducks.each do |duck| %>
+        <li>
+          <%= link_to duck.name, duck %>
+          </li>
+       <% end %>
+     </ul>

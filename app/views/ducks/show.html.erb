@@ -1,0 +1,8 @@
+<h1>These are all of the students the ducks belong to <%= @student.name %>  </h1>
+
+
+<h3><%= @duck.description %></h3>
+<h3><%= @duck.student.name %></h3>
+<%= button_to "Edit Quack info", edit_duck_path, :method => "get" %>
+
+<%= button_to 'Delete Duck', @duck, method: :delete, data: { confirm: 'Are you sure?' } %>

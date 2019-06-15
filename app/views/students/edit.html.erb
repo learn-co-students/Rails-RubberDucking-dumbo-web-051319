@@ -1,0 +1,9 @@
+<h1>Update <%= @student.name %>   </h1>
+
+<%= form_for @student do |f| %>
+  <label for="name">Update Student Name</label>
+  <%= f.text_field :name %>
+  <label for="mod">Student Mod</label>
+  <%= f.collection_select(:mod, Student.all, :id, :mod)  %>
+  <%= f.submit %>
+<% end %>
